@@ -1,9 +1,8 @@
-// Please fill in below.
-// <Your name>
-// <Your section number> (e.g. CPSC 121L-01)
-// <Date>
-// <Your csu.fullerton.edu email>
-// <Your GitHub username>
+// Jemin Song
+// CPSC 121L-02
+// 2/26/2024
+// jeminsong0119@csu.fullerton.edu
+// @jeminsong
 //
 // Lab 5-1
 // If it is a pair programming lab please specify partner below.
@@ -12,10 +11,16 @@
 #include "minimum.h"
 
 int IndexOfMinimumElement(std::vector<double> &input) {
-  // ==================== YOUR CODE HERE ====================
-  // Find the index of the smallest element in the input
-  // vector, and return it. If the input vector is empty,
-  // return -1.
-  // ========================================================
-  return -1;
+  if (input.empty()) {
+    return -1;
+  }
+  double min_val = input[0];
+  int min_index = 0;
+  for (int i = 1; i < input.size(); ++i) {
+    if (input[i] < min_val) {
+      min_val = input[i];
+      min_index = i;
+    }
+  }
+  return min_index;
 }
