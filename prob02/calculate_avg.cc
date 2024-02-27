@@ -1,9 +1,8 @@
-// Please fill in below.
-// <Your name>
-// <Your section number> (e.g. CPSC 121L-01)
-// <Date>
-// <Your csu.fullerton.edu email>
-// <Your GitHub username>
+// Jemin Song
+// CPSC 121L-02
+// 2/26/2024
+// jeminsong0119@csu.fullerton.edu
+// @jeminsong
 //
 // Lab 5-2
 // If it is a pair programming lab please specify partner below.
@@ -12,10 +11,12 @@
 #include <vector>
 
 double CalculateAverage(const std::vector<double> &student_grades) {
-  // ================= YOUR CODE HERE =================
-  // Compute and return the average grade
-  // based on the input vector containing student GPAs.
-  // Hint: you may want to use a range based loop!
-  // ==================================================
-  return 0.0;
+  if (student_grades.empty()) {
+    return 0.0;
+  }
+  double sum = 0.0;
+  for (double grade : student_grades) {
+    sum += grade;
+  }
+  return sum / student_grades.size();
 }
